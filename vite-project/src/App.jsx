@@ -1,6 +1,6 @@
 import  { Posts } from './Post'
 import { Header } from './Header'
-
+import { Sidebar } from './sidebar'
 
 import styles from './App.module.css'
 import './App.css'
@@ -11,10 +11,9 @@ export function App() {
     <>
       <Header />
 
-
       <div className={styles.wrapper}>
       
-        <aside>Sidebar</aside>
+        <Sidebar />
       
          <main>
 
@@ -22,7 +21,7 @@ export function App() {
         author="Matheus"
         content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aliquid corrupti voluptate reiciendis minima nostrum nihil voluptas adipisci laborum ex amet architecto molestias, alias porro. Provident amet maxime veniam nulla!"
             />
-            
+
          </main>
       </div>
 
