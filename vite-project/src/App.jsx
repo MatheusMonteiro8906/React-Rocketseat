@@ -17,10 +17,8 @@ export function App() {
       
          <main>
 
-            <Posts 
-        author="Matheus"
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aliquid corrupti voluptate reiciendis minima nostrum nihil voluptas adipisci laborum ex amet architecto molestias, alias porro. Provident amet maxime veniam nulla!"
-            />
+         <Posts/>
+         <Posts/>
 
          </main>
       </div>
