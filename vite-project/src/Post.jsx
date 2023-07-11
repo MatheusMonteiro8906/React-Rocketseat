@@ -27,6 +27,17 @@ export function Posts({ author, publishedAt, content}) {
     setNewCommentText(event.target.value);
   }
 
+  function deleteComment(commentToDelete) {
+    const commentsWithoutDeletedOne = comments.filter(comment =>{
+      return comment != commentToDelete;
+    })
+    setComments(commentsWithoutDeletedOne);
+  }
+
+  function handleNewCommentInvalid(){
+
+  }
+
   return (
       <article className={styles.post}>  
         <header>
@@ -55,14 +66,28 @@ export function Posts({ author, publishedAt, content}) {
         <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
           <strong>Deixe seu feedback</strong>
 
-          <textarea placeholder='Deixe um comentário' name='comment' onChange={handleNewCommentChange} value={newCommentText}/>
+          <textarea 
+          placeholder='Deixe um comentário'
+           name='comment' 
+          onChange={handleNewCommentChange} 
+          value={newCommentText}
+          onInvalid={handleNewCommentInvalid}
+          required
+          />
+
           <footer>
           <button type='submit'>publicar</button>
           </footer>
         </form>
         <div className={styles.commentList}>
         {comments.map(comment => {
-          return <Comment key={comment} content={comment}/>
+          return(
+          <Comment 
+             key={comment}
+             content={comment}
+             onDeleteComment={deleteComment}
+          />
+        )
         })}
         
         </div>
