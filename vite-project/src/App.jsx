@@ -11,9 +11,9 @@ import './App.css'
       author: {
           avatarUrl: 'https://avatars.githubusercontent.com/u/41351829?v=4',
           name: 'Matheus Monteiro',
-          role: 'Dev @ ServiceUp'
+          role: 'Dev @@ ServiceUp'
       },
-      content: [{type: 'paragraph', content: 'Fala pessoal👋'},
+      content: [{type: 'paragraph', content: 'Fala dpessoal👋'},
                 {type: 'paragraph', content: 'Finalmente finalizei meu novo site/portfólio. Foi um baita desafio criar todo o design e codar na unha, mas consegui 💪🏻'},
                 {type: 'link', content: 'Acesse e deixe seu feedback 👉 devonlane.design'},
     ],
@@ -23,14 +23,14 @@ import './App.css'
       id: 2,
       author: {
           avatarUrl: 'https://avatars.githubusercontent.com/u/41351829?v=4',
-          name: 'Matheus Monteiro',
+          name: 'Matheus teste',
           role: 'Dev @ ServiceUp'
       },
       content: [{type: 'paragraph', content: 'Fala pessoal👋'},
                 {type: 'paragraph', content: 'Finalmente finalizei meu novo site/portfólio. Foi um baita desafio criar todo o design e codar na unha, mas consegui 💪🏻'},
                 {type: 'link', content: 'Acesse e deixe seu feedback 👉 devonlane.design'},
     ],
-    publishedAt: new Date('2023-07-07 15:10:00 '),
+    publishedAt: new Date('2023-07-07 11:10:00 '),
     },
   ]
 
@@ -50,6 +50,7 @@ export function App() {
             return( 
            
               <Posts
+              key={post.id}
                 author={post.author}
                 content={post.content}
                 publishedAt={post.publishedAt}
